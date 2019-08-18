@@ -1,6 +1,5 @@
 package com.neoris.modelo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Veterinaria {
@@ -25,7 +24,7 @@ public int animalesAtendidosPorVeterinario(Veterinario veterinario){
 	
 }
 
-public int cantidadDeAnimalesAtendidos() {
+public int cantidadDeAnimalesAtendidos() {  //total de animales que se atendieron en la veterinaria
 	int cantidad=0;
 	for(Veterinario v: this.veterinarios) {
 		cantidad+= this.animalesAtendidosPorVeterinario(v);
