@@ -12,26 +12,28 @@ public class VeterinariaControlador {
 	}
 
 	public int detallePorVeterinario(Integer matricula) {
-	
+
 		return this.veterinaria.animalesAtendidosPorVeterinario(this.veterinaria.traerVeterinario(matricula));
 	}
 
 	public void revisarAnimal(Animal animal, Integer matricula) throws Exception {
 		Veterinario v = this.veterinaria.traerVeterinario(matricula);
-		if ((this.veterinaria.cantidadDeAnimalesAtendidos() < 20) && (v != null) ) { //si atendieron menos de 20 y el veterinario existe
-			v.revisar(animal);
+		if (v != null) {
+			if (this.veterinaria.cantidadDeAnimalesAtendidos() < 20) {
+				v.revisar(animal);
 
+			} else {
+				throw new Exception("La veterinaria ya atendio 20 animales");
+			}
+
+		} else {
+			throw new Exception("El veterinario no existe");
 		}
 
 	}
-	
+
 	public Veterinario traerVeterinario(Integer matricula) {
 		return this.veterinaria.traerVeterinario(matricula);
 	}
-	
-	
-	
-	
-	
 
 }

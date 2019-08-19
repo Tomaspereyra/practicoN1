@@ -65,6 +65,8 @@ public class Test {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		} 
+		
+		
 		System.out.println("Animales atendidos por "+veterinariaControlador.traerVeterinario(231)+" : "+veterinariaControlador.detallePorVeterinario(231));
 		
 		//-- Detalle del resto de los veterinarios--//
