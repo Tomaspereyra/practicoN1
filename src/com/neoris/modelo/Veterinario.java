@@ -7,12 +7,15 @@ public class Veterinario {
 	private String nombre;
 	private Integer matricula;
 	private List<Animal> animalesAtendidos;
-
-	public Veterinario(String nombre, Integer matricula) {
-		this.matricula = matricula;
+	
+	
+	public Veterinario(String nombre, Integer matricula, List<Animal> animalesAtendidos) {
 		this.nombre = nombre;
-		this.animalesAtendidos = new ArrayList<Animal>();
+		this.matricula = matricula;
+		this.animalesAtendidos = animalesAtendidos;
 	}
+
+
 	public Veterinario() {
 		
 	}
@@ -77,10 +80,13 @@ public class Veterinario {
 		}
 
 	}
+
+
 	@Override
 	public String toString() {
 		return "Veterinario [nombre=" + nombre + ", matricula=" + matricula + "]";
 	}
+	
 	
 
 }
